@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block header %}
+{% endblock header %}
+
+{% block content %}
+<div class="container">
+    <div class="card">
+        <h5 class="card-header">{{ object.category }}</h5>
+        <div class="card-body">
+          <h5 class="card-title">{{ object.title }}</h5>
+          <h6 class="card-title">{{ object.popstdate }}</h6>
+          <p class="card-text">{{ object.content }}</p>
+        </div>
+    </div>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <input type="submit" class="btn btn-danger mt-2 " value="削除します">
+    </form>
+
+</div>
+
+{% endblock content %}
